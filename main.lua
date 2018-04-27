@@ -192,7 +192,7 @@ local function collisionControl(self, event)
 	if (event.phase == 'began') then
 		print(self.id.. ' is on collision with '..event.other.id)
 	elseif (event.phase == 'ended') then
-		print(self.id.. ' ended on collision with '..event.other.id)
+		print(self.id.. ' ended collision with '..event.other.id)
 	end
 end
 
@@ -209,3 +209,5 @@ jumpButton:addEventListener('touch', jumpingSnow)
 -- Event listener for collision
 theSnowMan.collision = collisionControl
 theSnowMan:addEventListener('collision')
+theLandSquare.collision = collisionControl
+theLandSquare:addEventListener('collision')
